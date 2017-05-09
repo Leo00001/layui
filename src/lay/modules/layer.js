@@ -1,5 +1,4 @@
-﻿/**
-
+﻿
  @Name：layer v3.0.3 Web弹层组件
  @Author：贤心
  @Site：http://layer.layui.com
@@ -488,7 +487,7 @@ Class.pt.tips = function(){
     'padding-right': (config.closeBtn ? '30px' : '')
   });
   layero.css({
-    left: goal.tipLeft - (config.fixed ? win.scrollLeft() : 0), 
+    left: (goal.tipLeft - (config.fixed ? win.scrollLeft() : 0)) < 0 ? 10 : goal.tipLeft - (config.fixed ? win.scrollLeft() : 0), 
     top: goal.tipTop  - (config.fixed ? win.scrollTop() : 0)
   });
 }
